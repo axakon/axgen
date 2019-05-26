@@ -1,4 +1,4 @@
-
+[![CircleCI](https://circleci.com/gh/patnym/axgen/tree/master.svg?style=svg)](https://circleci.com/gh/patnym/axgen/tree/master)
 
 # Stuffz to do
 
