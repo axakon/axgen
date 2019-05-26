@@ -5,7 +5,8 @@
   "main": "cli/index.js",
   "scripts": {
     "test": "mocha lib/**/*.test.js",
-    "integration-tests": "mocha tests/integration/**/*.test.js"
+    "integration-tests": "mocha tests/integration/**/*.test.js",
+    "lint": "eslint . --cache"
   },
   "author": "",
   "license": "MIT",
