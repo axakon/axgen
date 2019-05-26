@@ -1,0 +1,14 @@
+#!/usr/bin/env node
+
+const Cli = require('../lib/utils/Cli');
+const Axgen = require('../lib/Axgen');
+
+const commandParser = new Cli();
+const app = new Axgen(commandParser);
+
+const input = commandParser.processInput();
+
+app.run(input.commands)
+  .catch((reason) => {
+    commandParser.logError(`ERROR! ${reason.message}`);
+  });
