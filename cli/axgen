@@ -8,7 +8,8 @@ const app = new Axgen(commandParser);
 
 const input = commandParser.processInput();
 
-app.run(input.commands)
-  .catch((reason) => {
-    commandParser.logError(`ERROR! ${reason.message}`);
+app.run(input.commands, input.parameter, input.flags)
+  .then(() => {
+  }).catch((reason) => {
+    commandParser.logError(`\x1b[31mERROR!\x1b[0m ${reason.message}`, reason);
   });

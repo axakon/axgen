@@ -10,7 +10,7 @@ describe('List command integration', () => {
 
   describe('list', () => {
     it('should list all available templates', () => {
-      const exec = execSync(`${axgenExec} list`);
+      const exec = execSync(`${axgenExec} template list`);
       const result = Buffer.from(exec, 'base64').toString();
       expect(result).to.contain('From test-template');
       expect(result).to.contain('My first template, C#, project');
